@@ -1,0 +1,22 @@
+<div class="navbar navbar-dark bg-info" role="navigation">
+  <div class="container" style="text-align: center; color: blue; font-family: 'Roboto Condensed', sans-serif;">
+    <div class="navbar-header">
+      <ul>
+        <a style="text-align: center; color: blue; font-family: 'Roboto Condensed', sans-serif;"
+          class="navbar-brand" href="/pitches/new/"> Pitch Cave </a>
+      </ul>
+    </div>
+
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+        
+        <li style="color:blue; font-family:'Roboto Condensed', sans-serif;">{{current_user.username}}</li>
+
+        <li><a style="color: blue; font-family: 'Roboto Condensed', sans-serif;" href="{{url_for('auth.logout')}}">Sign out</a></li>
+        
+        <li><a style="color: blue; font-family: 'Roboto Condensed', sans-serif;" href="{{url_for('auth.login')}}">Sign in</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
