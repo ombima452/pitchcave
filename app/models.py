@@ -130,19 +130,19 @@ class Downvote(db.Model):
         downvote_pitch.save_downvotes()
 
     
-    # @classmethod
+    @classmethod
     
-    # def get_downvotes(cls,id):
-    #     downvote = Downvote.query.filter_by(pitch_id=id).all()
-    #     return downvote
+    def get_downvotes(cls,id):
+        downvote = Downvote.query.filter_by(pitch_id=id).all()
+        return downvote
 
-    # @classmethod
+    @classmethod
     
-    # def get_all_downvotes(cls,pitch_id):
-    #     downvote = Downvote.query.order_by('id').all()
-    #     return downvote
+    def get_all_downvotes(cls,pitch_id):
+        downvote = Downvote.query.order_by('id').all()
+        return downvote
 
-    # def __repr__(self):
-    #     return f'{self.user_id}:{self.pitch_id}'
+    def __repr__(self):
+        return f'{self.user_id}:{self.pitch_id}'
 
 
