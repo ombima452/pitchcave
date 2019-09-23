@@ -4,4 +4,4 @@ export MAIL_USERNAME='christineombima452@gmail.com'
 export MAIL_PASSWORD='tynashee'
 export DATABASE_URL='postgresql+psycopg2://moringa:tynashee452@localhost/pitchcave'
 
-python3.6 manage.py server
+python3.6 manage.py server 

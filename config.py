@@ -4,7 +4,7 @@ class Config:
     '''
     General configuration parent class
     '''
-    SECRET_KEY = os.environ.get('SECRET_KEY')
+    SECRET_KEY =  ('SECRET_KEY')
     MAIL_SERVER = 'smtp.googlemail.com'
     MAIL_PORT = 587
     MAIL_USE_TLS = True
@@ -12,7 +12,7 @@ class Config:
     MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
     SUBJECT_PREFIX = 'PITCH'
     SENDER_EMAIL = 'christineombima452@gmail.com'
-    SQLALCHEMY_DATABASE_URI='postgresql+psycopg2://moringa:tynashee452@localhost/pitchcave'
+    SQLALCHEMY_DATABASE_URI=os.environ.get('DATABASE_URL')
     WTF_CSRF_ENABLED = False
 
 
