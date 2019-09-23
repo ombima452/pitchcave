@@ -1,0 +1,46 @@
+{% extends 'bootstrap/base.html' %}
+{% import 'macros.html' as macro %}
+{% block navbar %}
+{% include 'navbar.html'%}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="jumbotron " style="color:cadetblue">
+    <h3 style="color:black;text-align: center">Choose Your Categories</h3>
+    <br>
+    <ul class="nav nav-pills nav-justified nav-fill" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#music">Music</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#movies">Movies</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#art">Art</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#general">General</a>
+      </li>
+    </ul>
+
+  </div>
+  <div class="tab-content">
+    <div id="music" class="container tab-pane active"><br>
+      {{ macro.display(Music) }}
+
+    </div>
+    <div id="movies" class="container tab-pane fade"><br>
+      {{ macro.display(movies) }}
+    </div>
+    <div id="art" class="container tab-pane fade"><br>
+      {{ macro.display(art)}}
+    </div>
+    <div id="general" class="container tab-pane fade"><br>
+      {{ macro.display(general) }}
+    </div>
+
+  </div>
+</div>
+</div>
+{% endblock %}
