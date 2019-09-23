@@ -4,11 +4,13 @@
 {% include 'navbar.html'%}
 {% endblock %}
 
+
 {% block content %}
 <div class="container">
-  <div class="jumbotron " style="color:cadetblue">
+  
     <h3 style="color:black;text-align: center">Choose Your Categories</h3>
     <br>
+    <div>
     <ul class="nav nav-pills nav-justified nav-fill" role="tablist">
       <li class="nav-item">
         <a class="nav-link active" data-toggle="tab" href="#music">Music</a>
@@ -27,7 +29,7 @@
   </div>
   <div class="tab-content">
     <div id="music" class="container tab-pane active"><br>
-      {{ macro.display(Music) }}
+      {{ macro.display(music) }}
 
     </div>
     <div id="movies" class="container tab-pane fade"><br>
