@@ -66,17 +66,17 @@ class Pitch(db.Model):
 
     
 
-# class Comment(db.Model):
-#     __tablename__='comments'
+class Comment(db.Model):
+    __tablename__='comments'
     
-#     id = db.Column(db.Integer,primary_key=True)
-#     pitch_id = db.Column(db.Integer, db.ForeignKey('pitches.id'), nullable=False)
-#     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable= False)
-#     description = db.Column(db.Text)
+    id = db.Column(db.Integer,primary_key=True)
+    pitch_id = db.Column(db.Integer, db.ForeignKey('pitches.id'), nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable= False)
+    description = db.Column(db.Text)
 
     
-#     def __repr__(self):
-#         return f"Comment : id: {self.id} comment: {self.description}"
+    def __repr__(self):
+        return f"Comment : id: {self.id} comment: {self.description}"
 
 
 # class Upvote(db.Model):
