@@ -14,7 +14,7 @@ def index():
     Root page functions that return the home page and its data
     '''
     pitch = Pitch.query.filter_by().first()
-    title = 'Welcome'
+    title = 'PitchCave'
     music = Pitch.query.filter_by(category="music")
     movies = Pitch.query.filter_by(category ="movies")
     art = Pitch.query.filter_by(category ="art")
