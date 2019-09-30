@@ -7,7 +7,6 @@ from flask.views import View,MethodView
 from .. import db 
 
 
-
 @main.route('/', methods = ['GET','POST'])
 def index():
 
@@ -26,9 +25,6 @@ def index():
 
     return render_template('home.html', title = title, pitch = pitch, movies=movies, music=music, art=art, general=general, upvotes=upvotes)
     
-
-
-
 
 @main.route('/pitches/new/', methods = ['GET','POST'])
 @login_required
@@ -51,7 +47,6 @@ def new_pitch():
 
 
 
-
 @main.route('/comment/new/<int:pitch_id>', methods = ['GET','POST'])
 @login_required
 def new_comment(pitch_id):
@@ -68,10 +63,9 @@ def new_comment(pitch_id):
         return redirect(url_for('.new_comment', pitch_id= pitch_id))
 
     all_comments = Comment.query.filter_by(pitch_id = pitch_id).all()
-    return render_template('comments.html', form = form, comment = all_comments, pitch = pitch )
+    return render_template('comments.html', form = form, comment = all_comments, pitch= pitch )
 
    
-
 @main.route('/pitch/upvote/<int:pitch_id>/upvote', methods = ['GET', 'POST'])
 @login_required
 def upvote(pitch_id):
@@ -86,9 +80,6 @@ def upvote(pitch_id):
     new_upvote = Upvote(pitch_id=pitch_id, user = current_user)
     new_upvote.save_upvotes()
     return redirect(url_for('main.index'))
-
-
-
 
 
 @main.route('/pitch/downvote/<int:pitch_id>/downvote', methods = ['GET', 'POST'])
